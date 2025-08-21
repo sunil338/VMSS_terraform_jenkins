@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/yourrepo/terraform-vmss-budget.git'
+                git branch: 'main', url: 'https://github.com/sunil338/VMSS_terraform_jenkins.git'
             }
         }
 
