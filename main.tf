@@ -71,7 +71,7 @@ data "azurerm_virtual_machine_scale_set" "example" {
 # Budget alert for VMSS
 resource "azurerm_consumption_budget_subscription" "vmss_budget" {
   name            = var.budget_name
-  subscription_id = var.subscription_id
+  subscription_id = var.ARM_SUBSCRIPTION_ID
   amount          = var.budget_amount
   time_grain      = var.time_grain
   category        = "Cost"
