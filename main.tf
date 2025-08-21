@@ -73,12 +73,11 @@ resource "azurerm_consumption_budget_subscription" "vmss_budget" {
   name            = var.budget_name
   subscription_id = var.ARM_SUBSCRIPTION_ID
   amount          = var.budget_amount
-  time_grain      = var.time_grain
-  category        = "Cost"
+  time_grain      = "Monthly"
 
-  filter {
-    resource_group_name = azurerm_resource_group.example.name
-    resource_ids        = [data.azurerm_virtual_machine_scale_set.example.id]
+  time_period {
+    start_date = "2025-08-01T00:00:00Z"
+    end_date   = "2026-08-01T00:00:00Z"
   }
 
   notification {
