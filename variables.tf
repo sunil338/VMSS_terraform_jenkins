@@ -1,6 +1,7 @@
 variable "ARM_SUBSCRIPTION_ID" {
   description = "ARM_SUBSCRIPTION_ID"
   type        = string
+  default     = "34a1c0d5-ab81-462c-89db-795e1572cd70"
 }
 
 variable "resource_group_name" {
